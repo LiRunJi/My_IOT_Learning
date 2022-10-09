@@ -1,0 +1,84 @@
+
+#gitlab_password: OFQ11kMZJsPGYT7papkwEcVqWUwIddwRyCLArst2DrU=
+to_tencentCloud:
+#  在腾讯云上部署,懒得改内网了
+  db_type: mysql
+  db_driver: pymysql
+  db_url: 127.0.0.1:3306
+  db_userName: root
+  db_password: 123456
+  db_name: test
+
+  mqtt_url: 42.192.227.238
+  mqtt_port: 1883
+  mqtt_client_id: python_on_tencent
+
+
+  test_page: http://42.192.227.238
+  data_url: http://42.192.227.238/DianDongChe_add/one_data
+
+on_win_to_tencent:
+#  在腾讯云上部署,懒得改内网了
+  db_type: mysql
+  db_driver: pymysql
+  db_url: 127.0.0.1:3306
+  db_userName: root
+  db_password: 123456
+  db_name: test2
+
+  mqtt_url: 42.192.227.238
+  mqtt_port: 1883
+  mqtt_client_id: python_on_tencent
+
+  test_page: http://42.192.227.238
+  data_url: http://42.192.227.238/DianDongChe_add/one_data
+on_pi_to_tencent:
+#  在腾讯云上部署,懒得改内网了
+  db_type: mysql
+  db_driver: pymysql
+  db_url: 127.0.0.1:3306
+  db_userName: root
+  db_password: 123456
+  db_name: test2
+
+  mqtt_url: 42.192.227.238
+  mqtt_port: 1883
+  mqtt_client_id: python_on_tencent
+
+  test_page: http://42.192.227.238
+  data_url: http://42.192.227.238/DianDongChe_add/one_data
+
+on_win_to_ubuntu:
+#  在腾讯云上部署,懒得改内网了
+  db_type: mysql
+  db_driver: pymysql
+  db_url: 127.0.0.1:3306
+  db_userName: root
+  db_password: 123456
+  db_name: test2
+
+  mqtt_url: 42.192.227.238
+  mqtt_port: 1883
+  mqtt_client_id: python_on_tencent
+
+  test_page: http://42.192.227.238
+  data_url: http://42.192.227.238/DianDongChe_add/one_data
+
+on_pi_to_ubuntu:
+#  在腾讯云上部署,懒得改内网了
+  db_type: mysql
+  db_driver: pymysql
+  db_url: 127.0.0.1:3306
+  db_userName: root
+  db_password: 123456
+  db_name: test2
+
+  mqtt_url: 192.168.26.103
+  mqtt_port: 1883
+
+  mqtt_client_id: python_on_pi
+
+  test_page: http://42.192.227.238
+  data_url: http://42.192.227.238/DianDongChe_add/one_data
+
+
