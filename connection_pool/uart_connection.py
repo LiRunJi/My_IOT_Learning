@@ -1,22 +1,31 @@
 import serial
 import platform
+from serial.tools import list_ports
+
+
+def scan_ports_linux():
+    plist = list(serial.tools.list_ports.comports())
+    for p in plist:
+        if p.name.__contains__('ttyUSB'):
+            print(p.__str__())
+            return f'/dev/{p.name}'
+
+
+def scan_ports_windows():
+    plist = list(serial.tools.list_ports.comports())
+    for p in plist:
+        print(p.__str__())
+        return p.name
 
 if platform.system() == "Windows":
     try:
-        ble_uart = serial.Serial('com3', 9600, timeout=1)
-        print("com3")
+        ble_uart = serial.Serial(scan_ports_windows(), 9600, timeout=1)
     except Exception as e:
-        try:
-            ble_uart = serial.Serial('com4', 9600, timeout=1)
-            print("com4")
-        except Exception as e:
-            ble_uart = serial.Serial('com5', 9600, timeout=1)
-            print("com5")
-
+        print(e)
+        print("设备没插入,请插入后再试")
 else:
     try:
-        ble_uart = serial.Serial('/dev/ttyUSB0', 9600, timeout=1)
-        print("on usb0")
+        ble_uart = serial.Serial(scan_ports_linux(), 9600, timeout=1)
     except Exception as e:
-        ble_uart = serial.Serial('/dev/ttyUSB1', 9600, timeout=1)
-        print("on usb1")
+        print(e)
+        print("设备没插入,请插入后再试")
