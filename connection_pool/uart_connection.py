@@ -8,14 +8,14 @@ def scan_ports_linux():
     for p in plist:
         if p.name.__contains__('ttyUSB'):
             print(p.__str__())
-            return f'/dev/{p.name}'
+            return p.device
 
 
 def scan_ports_windows():
     plist = list(serial.tools.list_ports.comports())
     for p in plist:
         print(p.__str__())
-        return p.name
+        return p.device
 
 if platform.system() == "Windows":
     try:
