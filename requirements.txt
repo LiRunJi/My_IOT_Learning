@@ -1,0 +1,6 @@
+SQLAlchemy
+PyYAML
+requests
+pyserial
+paho-mqtt
+urllib3

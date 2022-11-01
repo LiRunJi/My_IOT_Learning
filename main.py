@@ -44,7 +44,7 @@ while True:
                 print("最外层,http出问题")
             #处理不需要联网的事情
             try:
-                ble_return['local'] =deal_with_local(message['local'])
+                ble_return['local'] =deal_with_local(message)
             except Exception as e:
                 print("最外层,本地出问题")
                 ble_return['local']='e'
