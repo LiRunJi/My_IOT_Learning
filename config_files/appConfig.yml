@@ -1,0 +1,89 @@
+
+
+#gitlab_password: OFQ11kMZJsPGYT7papkwEcVqWUwIddwRyCLArst2DrU=
+on_tencentCloud:
+#  在腾讯云上部署,懒得改内网了
+  db_type: mysql
+  db_driver: pymysql
+  db_url: sh-cynosdbmysql-grp-mumt0jjs.sql.tencentcdb.com:24403
+
+  db_userName: root
+  db_password: :587SLa!f5eCaTc
+  db_name: test2
+
+  mqtt_url: 42.192.227.238
+  mqtt_port: 1883
+  mqtt_client_id: python_on_tencent
+
+  mqtt_bridge:
+    test_connection_url: http://localhost:80
+    data_post_url: http://localhost:80/DianDongChe_add/one_data
+    topic_to_subscribe:
+      - /ShaoLinSi/add_data
+      - /SQY/User1/fire2/data
+
+
+
+
+on_ubuntu_vm:
+#  这个是在ubuntu上的配置
+  db_type: mysql
+  db_driver: pymysql
+  db_url: 127.0.0.1:3306
+  db_userName: root
+  db_password: 123456
+  db_name: test2
+
+  mqtt_url: 127.0.0.1
+  mqtt_port: 1883
+
+  mqtt_client_id: python_on_ubuntu
+  mqtt_bridge:
+    test_connection_url: http://localhost:443
+    data_post_url: http://localhost:443/DianDongChe_add/one_data
+    topic_to_subscribe:
+      - /ShaoLinSi/add_data
+      - /SQY/User1/fire2/data
+
+on_win_to_tencent:
+#  在windows上连腾讯云的mqtt和数据库
+  db_type: mysql
+  db_driver: pymysql
+  db_url: sh-cynosdbmysql-grp-mumt0jjs.sql.tencentcdb.com:24403
+
+  db_userName: root
+  db_password: :587SLa!f5eCaTc
+  db_name: test2
+
+  mqtt_url: 42.192.227.238
+  mqtt_port: 1883
+  mqtt_client_id: python_on_win_
+
+  mqtt_bridge:
+      test_connection_url: http://localhost:80
+      data_post_url: http://localhost:80/DianDongChe_add/one_data
+      topic_to_subscribe:
+        - /ShaoLinSi/add_data
+        - /SQY/User1/fire2/data
+
+on_win_to_ubuntu:
+#  在windows上连ubuntu虚拟机上的mqtt和数据库,
+#  难受的是ip一直是变的,所以说,要时不时的修改,
+#  这样也好,改着方便一些
+  db_type: mysql
+  db_driver: pymysql
+  db_url: 192.168.58.128:3306
+
+  db_userName: root
+  db_password: 123456
+  db_name: test2
+
+  mqtt_url: 192.168.58.128
+  mqtt_port: 1883
+  mqtt_client_id: python_on_win_
+  mqtt_bridge:
+      test_connection_url: http://localhost:80
+      data_post_url: http://localhost:80/DianDongChe_add/one_data
+      topic_to_subscribe:
+        - /ShaoLinSi/add_data
+        - /SQY/User1/fire2/data

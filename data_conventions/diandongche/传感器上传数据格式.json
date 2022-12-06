@@ -1,0 +1,42 @@
+//
+//{
+//  "sensor_datas": [
+//    {
+//      "sensor_name":"dht1",
+//      "data_name": "temperature",
+//      "data_value": "16",
+//      "data_type": "float",
+//      "time": "2022-9-19 19:52:37"
+//    },
+//      {
+//      "sensor_name":"dht2",
+//      "data_name": "humidity",
+//      "data_value": "16",
+//      "data_type": "float",
+//      "time": "2022-9-19 19:52:37"
+//    }
+//  ]
+//}
+{
+  "sensor_datas": [
+    {
+      "sensor_name": "dht1",
+      "name": "temperature",
+      "type": "float",
+      "value": "25.0",
+      "time": "2022-09-20 15:42:33"
+    },
+    {
+      "sensor_name": "dht2",
+      "name": "temperature",
+      "type": "float",
+      "value": "25.0",
+      "time": "2022-09-20 15:42:33"
+    }
+  ]
+}
+
+
+
+
+

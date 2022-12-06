@@ -1,0 +1,30 @@
+{
+"auto_control":0,
+
+"control_instructions": [ {
+
+        "target_name":"f1",
+
+        "instruction":0
+    },
+
+    {
+        "target_name":"f2",
+
+        "instruction":1
+    },
+    {
+
+        "target_name":"led1",
+
+        "instruction":0
+    },
+
+    {
+        "target_name":"s1",
+
+        "instruction":1
+    }
+]
+
+}

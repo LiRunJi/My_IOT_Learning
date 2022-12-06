@@ -1,0 +1,6 @@
+
+
+
+db_type: mysql
+db_driver: pymysql
+db_url: sh-cynosdbmysql-grp-mumt0jjs.sql.tencentcdb.com:24403

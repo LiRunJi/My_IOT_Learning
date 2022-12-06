@@ -1,0 +1,13 @@
+{
+  "id": 1,
+  "http": {
+    "method": "post",
+    "data":2,
+    "url": "http://42.192.227.238/DianDongChe_BaoJing/set_flag"
+  },
+  "mqtt": {
+    "url" : "" ,
+    "topic": "",
+    "data": ""
+  }
+}

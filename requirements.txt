@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+sqlalchemy
+passlib
+pyyaml
+paho-mqtt
+urllib3
+pydantic
+pymysql
+jupyter
+requests
