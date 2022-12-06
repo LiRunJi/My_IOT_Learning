@@ -1,22 +1,31 @@
 
 from connection_pool.uart_connection import ble_uart
+print(-1)
 from handler.HttpService import send_http
+print(-2)
 from handler.LocalService import deal_with_local
+print(-3)
 import json
 import threading
 '''
 加载一堆进程
 '''
 from handler.NetWorkService import refresh_http_flag
+print(-4)
 from handler.DBService import send_unsent_datas_in_db
+print(-5)
 from handler.MqttService import working_start
+print(-6)
 #开启刷新连接到服务器标志位的线程
+print(-7)
 threading.Thread(target=refresh_http_flag).start()
 #开启联网就上传断网数据的线程
+print(-8)
 threading.Thread(target=send_unsent_datas_in_db).start()
+print(-9)
 #开启mqtt接收控制的线程
 threading.Thread(target=working_start).start()
-
+print(-10)
 
 
 
