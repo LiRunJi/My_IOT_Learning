@@ -6,7 +6,7 @@
 '''
 import os
 import sys
-python="/usr/local/bin/python3.10"
+python="/usr/local/bin/uvicorn"
 host="0.0.0.0"
 if len(sys.argv)<2:
     os.system(f"sudo nohup {python} main:app --host {host} --port 80 &")
