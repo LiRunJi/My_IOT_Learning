@@ -13,6 +13,9 @@ from drivers.mqtt_connection import get_client,connect
 from config_files.load_total_project_configs import conf
 import requests
 
+def print(str):
+    pass
+
 '''加载驱动'''
 client = get_client()   #拿一个client
 '''
@@ -43,6 +46,7 @@ def add_lots_of_data_by_name(datas_json):
             id=SensorsDao.get_id_by_name(data_json["sensor_name"],db)
             if id is None:
                 continue
+
             one_data = Sensor.sensors_data(
                                            sensor_id=id,
                                            name=data_json["name"],
