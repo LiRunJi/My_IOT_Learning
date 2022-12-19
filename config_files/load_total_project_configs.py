@@ -10,7 +10,7 @@ with open("config_files/appConfig.yml",'r',encoding='utf-8') as f:
 '''
 if platform.system()=="Windows":
     conf = confs['on_win_to_tencent']
-    print(f"unknown platform: {platform.version()}")
+    print(f"{platform.version()}")
 else:
     if platform.version().__contains__("Ubuntu"):
         conf = confs['on_ubuntu_vm']
