@@ -6,7 +6,9 @@
 '''
 import os
 import sys
+python="/usr/local/bin/python3.10"
+host="0.0.0.0"
 if len(sys.argv)<2:
-    os.system("sudo nohup /usr/local/bin main:app --host '0.0.0.0' --port 80 &")
+    os.system(f"sudo nohup {python} main:app --host {host} --port 80 &")
 else:
-    os.system(f"sudo nohup /usr/local/bin main:app --host '0.0.0.0' --port {sys.argv[1]} &")
+    os.system(f"sudo nohup {python} main:app --host {host} --port {sys.argv[1]} &")
