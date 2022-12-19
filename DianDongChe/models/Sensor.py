@@ -4,13 +4,13 @@ from sqlalchemy.orm import relationship
 
 
 
-class sensors(Base  ):
+class sensors(Base):
     __tablename__ = "sensors"
     id = Column(Integer,primary_key=True)  # INTEGER NOT NULL,
     name           = Column(VARCHAR(20))  # VARCHAR(20) NOT NULL,
     type           =Column(VARCHAR(20))
     location       = Column(VARCHAR(40))  # VARCHAR(40) NOT NULL,
-    smart_node_id  = Column(Integer,ForeignKey("smart_nodes.id"))
+    # smart_node_id  = Column(Integer,ForeignKey("smart_nodes.id"))
     data_names     = Column(VARCHAR(200))
     data_types     = Column(VARCHAR(200))
 

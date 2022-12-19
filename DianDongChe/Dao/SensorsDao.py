@@ -1,6 +1,14 @@
 from sqlalchemy.orm import Session
 from DianDongChe.models.Sensor import sensors, sensors_data
 
+def add_one_sensor(sensor_name:str,db:Session):
+    sensor=sensors()
+    sensor.name=sensor_name
+    db.add(sensor)
+    db.commit()
+    db.flush(sensor)
+    return sensor.id
+
 ###############################################
 #                                             #
 #      按照传感器名字,数据名字,获得最近一条数据      #
@@ -21,7 +29,11 @@ def get_sensor_by_name(name: str, db: Session):
 
 #这个比较关键,后边都是按照这个查的
 def get_id_by_name(name: str, db: Session):
-    return get_sensor_by_name(name=name, db=db).id
+    try:
+        id=get_sensor_by_name(name=name, db=db).id
+        return id
+    except:
+        return None
 
 
 def get_the_last_one_by_sensorName_and_dataName(sensor_name: str, data_name: str, db: Session):
