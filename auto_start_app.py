@@ -1,6 +1,6 @@
 import datetime
 
-directory=r'/home/my_iot_competition/'
+directory=r'/home/My_IOT_Learning/'
 "cd /home/my_iot_competition/;python3 run_app.py"
 '''
 使用这个开机自启的脚本需要以下几步:
